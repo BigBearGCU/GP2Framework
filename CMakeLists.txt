@@ -1,0 +1,7 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6 FATAL_ERROR)
+project("GPFramework")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/modules)
+find_package(SDL2)
+Add_SubDirectory(Game)
+Add_SubDirectory(OpenGLRenderer)
+Add_SubDirectory(MyGame)
