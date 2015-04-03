@@ -1,6 +1,8 @@
 project("OpenGLRenderer")
 
-include_directories(include)
+include_directories(include ${GAME_INC_PATH})
+
+message("Game Include in Renderer ${GAME_INC_PATH}")
 
 file(GLOB_RECURSE OPENGL_RENDERER_INC
 	"include/*.h")

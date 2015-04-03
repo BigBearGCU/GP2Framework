@@ -1,11 +1,12 @@
 project("MyGame")
 
-include_directories(include)
+message("Game Inc Path ${GAME_INC_PATH}")
+include_directories(include ${GAME_INC_PATH})
 file(GLOB MYGAME_SRC
     "src/*.cpp"
 )
 
-file(GLOB_RECURSE MYGAME_INC 
+file(GLOB_RECURSE MYGAME_INC
 	"include/*.h")
 
 add_executable(MyGame ${MYGAME_SRC} ${MYGAME_INC})

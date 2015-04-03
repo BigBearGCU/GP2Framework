@@ -1,4 +1,4 @@
-#include "../../Game/include/Renderer/Renderer.h"
+#include "Renderer/Renderer.h"
 
 class OpenGLRender :public IRenderer
 {
@@ -12,12 +12,12 @@ public:
 
 extern "C"
 {
-	extern __declspec(dllexport) IRenderer * createRenderer()
+	extern EXPORT IRenderer * createRenderer()
 	{
 		return new OpenGLRender();
 	}
 
-	extern __declspec(dllexport) void destoryRenderer(IRenderer * renderer)
+	extern EXPORT void destoryRenderer(IRenderer * renderer)
 	{
 		delete renderer;
 		renderer = nullptr;

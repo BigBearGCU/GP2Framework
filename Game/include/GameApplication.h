@@ -2,10 +2,10 @@
 
 #include <SDL.h>
 
-#include "Utils\ConfigParser.h"
-#include "Utils\CommandLineParser.h"
+#include "Utils/ConfigParser.h"
+#include "Utils/CommandLineParser.h"
 
-#include "Renderer\Renderer.h"
+#include "Renderer/Renderer.h"
 
 using namespace std;
 
@@ -30,7 +30,7 @@ protected:
 
 	SDL_Window * m_Window;
 	SDL_Event m_Event;
-	
+
 	IRenderer *m_Renderer;
 	void *m_RendererLib;
 

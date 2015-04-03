@@ -1,4 +1,4 @@
-#include "../../Game/include/GameApplication.h"
+#include "GameApplication.h"
 
 class MyGameApp :public GameApplication
 {
