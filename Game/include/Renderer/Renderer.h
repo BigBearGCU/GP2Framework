@@ -1,3 +1,14 @@
+#if defined (_WIN32)
+#if defined (_MSC_VER)
+#pragma warning(disable: 4251)
+#endif
+#if !defined(EXPORT)
+#define  EXPORT __declspec(dllexport)
+#endif
+#else
+#define EXPORT
+#endif
+
 class IRenderer
 {
 public:
@@ -9,6 +20,6 @@ public:
 
 extern "C"
 {
-	extern __declspec(dllexport) IRenderer * createRenderer();
-	extern __declspec(dllexport) void destoryRenderer(IRenderer * renderer);
+	extern EXPORT IRenderer * createRenderer();
+	extern EXPORT void destoryRenderer(IRenderer * renderer);
 }
